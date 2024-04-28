@@ -57,6 +57,4 @@ export async function isAdmin() {
   return userInfo.admin;
 }
 
-const handler = NextAuth(authOptions);
-
-export default handler;
+export default NextAuth(authOptions);
