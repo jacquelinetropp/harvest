@@ -15,10 +15,6 @@ export const authOptions = {
         strategy: 'jwt'
       },
     providers: [
-      GoogleProvider({
-        clientId: process.env.GOOGLE_CLIENT_ID,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      }),
       CredentialsProvider({
         name: 'Credentials',
         id: 'credentials',
@@ -40,7 +36,11 @@ export const authOptions = {
   
           return null
         }
-      })
+      }),
+      GoogleProvider({
+        clientId: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      }),      
     ],
   };
   
