@@ -7,11 +7,11 @@ import NextAuth, {getServerSession} from "next-auth";
 // import CredentialsProvider from "next-auth/providers/credentials";
 // import GoogleProvider from "next-auth/providers/google";
 // import { MongoDBAdapter } from "@auth/mongodb-adapter"
-import { isAdmin, authOptions } from "../../../authUtils";
+import { authOptions } from "../../../authUtils";
 
 const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST }
 
 // Exporting the isAdmin function if needed elsewhere
-export { isAdmin, authOptions };
+// export { isAdmin, authOptions };

@@ -1,6 +1,6 @@
 import { MenuItem } from "@/models/MenuItems";
 import mongoose from "mongoose";
-import { isAdmin } from "@/app/api/auth/[...nextauth]/route";
+import {isAdmin} from "@/app/authUtils";
 
 export async function POST(req) {
   mongoose.connect(process.env.MONGO_URL);
